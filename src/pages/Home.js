@@ -12,7 +12,7 @@ export default function Home({ onOpenSidebar }) {
       </button>
 
       <section className="hero">
-        <h1>Project Portfolio</h1>
+        <h1>James' Project Space</h1>
       </section>
 
       <section className="projects-section">

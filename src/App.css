@@ -101,6 +101,13 @@ body, html, #root {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    font-size: 2rem; /* smaller text for mobile */
+    padding: 0 1rem; /* add padding so text doesn't touch edges */
+  }
+}
+
 /* Hamburger Button */
 .hamburger-btn {
   display: none;
