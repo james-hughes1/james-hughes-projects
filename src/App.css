@@ -205,12 +205,15 @@ body, html, #root {
   }
 }
 
+.project-detail-container {
+  background-color: #121212;
+}
+
 .project-detail {
   padding: 2rem;
   color: white;
   max-width: 900px;
   margin: 0 auto;
-  background-color: #121212;
 }
 
 .project-detail h1 {
