@@ -1,25 +1,34 @@
 import React from "react";
-import Hero from "../components/Hero";
-import ProjectCard from "../components/ProjectCard";
+import { useNavigate } from "react-router-dom";
 import projects from "../data/projects";
 
 export default function Home({ onOpenSidebar }) {
+  const navigate = useNavigate();
+
   return (
     <>
-      <button
-        className="hamburger-btn"
-        onClick={onOpenSidebar}
-        aria-label="Open sidebar"
-      >
+      <button className="hamburger-btn" onClick={onOpenSidebar} aria-label="Open sidebar">
         &#9776;
       </button>
 
-      <Hero />
+      <section className="hero">
+        <h1>Project Portfolio</h1>
+      </section>
 
       <section className="projects-section">
         <div className="projects-grid">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {projects.map(({ id, title, description, imageUrl }) => (
+            <button
+              key={id}
+              className="project-card"
+              style={{ backgroundImage: `url(${imageUrl})` }}
+              onClick={() => navigate(`/project/${id}`)}
+              aria-label={`View details for ${title}`}
+            >
+              <div className="overlay" />
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </button>
           ))}
         </div>
       </section>

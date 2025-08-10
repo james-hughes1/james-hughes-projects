@@ -13,10 +13,7 @@ function App() {
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <main className="main-content">
         <Routes>
-          <Route
-            path="/"
-            element={<Home onOpenSidebar={() => setSidebarOpen(true)} />}
-          />
+          <Route path="/" element={<Home onOpenSidebar={() => setSidebarOpen(true)} />} />
           <Route path="/project/:projectId" element={<ProjectDetail />} />
         </Routes>
         <Footer />

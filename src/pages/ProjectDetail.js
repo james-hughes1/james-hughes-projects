@@ -1,23 +1,38 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import projects from "../data/projects";
 
 export default function ProjectDetail() {
   const { projectId } = useParams();
+  const navigate = useNavigate();
+
   const project = projects.find((p) => p.id === projectId);
 
-  if (!project) return <p>Project not found</p>;
+  if (!project) {
+    return (
+      <div className="project-detail not-found">
+        <h2>Project Not Found</h2>
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          Go Back
+        </button>
+      </div>
+    );
+  }
 
   return (
-    <section className="project-detail">
-      <h2>{project.title}</h2>
-      <p>{project.details}</p>
-      <ul>
-        {project.tech.map((tech) => (
-          <li key={tech}>{tech}</li>
-        ))}
-      </ul>
-      <Link to="/" className="btn small">Back to Home</Link>
-    </section>
+    <div className="project-detail-container">
+      <div className="project-detail">
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
+        <h1>{project.title}</h1>
+        <img
+          src={project.imageUrl}
+          alt={project.title}
+          className="project-image"
+        />
+        <p className="project-details">{project.details}</p>
+      </div>
+    </div>
   );
 }
