@@ -1,22 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import projects from "../data/projects";
 
 export default function ProjectDetail() {
+  const { projectId } = useParams();
+  const project = projects.find((p) => p.id === projectId);
+
+  if (!project) return <p>Project not found</p>;
+
   return (
     <section className="project-detail">
-      <h2>Project One</h2>
-      <p>
-        This is a detailed page about Project One. Here you can explain what
-        you did, technologies used, challenges, and what you learned.
-      </p>
+      <h2>{project.title}</h2>
+      <p>{project.details}</p>
       <ul>
-        <li>Built with React and Node.js</li>
-        <li>Implemented responsive design</li>
-        <li>Integrated with external APIs</li>
+        {project.tech.map((tech) => (
+          <li key={tech}>{tech}</li>
+        ))}
       </ul>
-      <Link to="/" className="btn small">
-        Back to Home
-      </Link>
+      <Link to="/" className="btn small">Back to Home</Link>
     </section>
   );
 }
