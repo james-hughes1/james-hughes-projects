@@ -11,9 +11,11 @@ export default function Home({ onOpenSidebar }) {
         &#9776;
       </button>
 
-      <section className="hero">
-        <h1>James' Project Space</h1>
-      </section>
+      <div className="hero">
+        <img src="/ide-background.jpg" alt="Hero" className="hero-img" />
+        <div className="hero-overlay"></div>
+        <h1 className="hero-title">James' Project Space</h1>
+      </div>
 
       <section className="projects-section">
         <div className="projects-grid">

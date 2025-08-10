@@ -9,8 +9,8 @@ export default function Sidebar({ open, onClose }) {
       <img src="/ljubljana_castle.jpg" alt="Me" className="profile-pic" />
       <p className="bio">
         I made this page to organise all of my personal projects in one place.
-        They cover AI, data science, and programming. I learn something new on
-        each one!
+        They cover AI, data science, and programming.
+        For each one I have written a summary of what I did and what I learnt.
       </p>
       <div className="links">
         <a href="https://linkedin.com/in/jameshughes-1" target="_blank" rel="noreferrer">LinkedIn</a>
