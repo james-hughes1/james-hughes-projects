@@ -31,6 +31,29 @@ export default function ProjectDetail() {
           alt={project.title}
           className="project-image"
         />
+        {/* Conditionally render links */}
+        <div className="links">
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              GitHub Repo
+            </a>
+          )}
+          {project.websitelink && (
+            <a
+              href={project.websitelink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Live Site
+            </a>
+          )}
+        </div>
         <p className="project-details">{project.details}</p>
       </div>
     </div>
