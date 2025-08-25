@@ -6,13 +6,16 @@ const projects = [
     imageUrl: "/flagpuzzleimg.png",
     details: "A flag puzzle game.",  
     github: "https://github.com/james-hughes1/flagpuzzle",
-    websitelink: "https://flagpuzzle.onrender.com"},
+    websitelink: "https://flagpuzzle.onrender.com"
+  },
   {
     id: "project-2",
-    title: "Placeholder",
-    description: "Real-time weather forecasts with an elegant UI.",
-    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    details: "Here's how I did it."
+    title: "Poker Simulator",
+    description: "Play poker with AI opponents. (LLM APIs, React)",
+    imageUrl: "/pokersimimg.png",
+    details: "Here's how I did it.",
+    github: "https://github.com/james-hughes1/pokersim",
+    websitelink: "https://pokersim.vercel.app/"
   },
   {
     id: "project-3",
