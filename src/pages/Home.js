@@ -23,7 +23,11 @@ export default function Home({ onOpenSidebar }) {
             <button
               key={id}
               className="project-card"
-              style={{ backgroundImage: `url(${imageUrl})` }}
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${imageUrl})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
               onClick={() => navigate(`/project/${id}`)}
               aria-label={`View details for ${title}`}
             >
