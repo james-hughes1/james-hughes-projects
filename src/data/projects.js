@@ -11,7 +11,7 @@ const projects = [
   {
     id: "project-2",
     title: "Robo Dunk",
-    description: "Play poker with AI opponents. (AWS & Monitoring, Reinforcement Learning, CI/CD)",
+    description: "A sandbox for RL inference. (AWS & Monitoring, Reinforcement Learning, CI/CD)",
     imageUrl: "/robodunk-small.png",
     details: "Description incoming, for now visit the GitHub or the live site.",
     github: "https://github.com/james-hughes1/robo-dunk",
