@@ -50,7 +50,7 @@ export default function ProjectDetail() {
               rel="noopener noreferrer"
               className="btn"
             >
-              Live Site
+              Webapp / Report
             </a>
           )}
         </div>
