@@ -2,7 +2,7 @@ const projects = [
   {
     id: "project-1",
     title: "Rate My Bookshelf",
-    description: "Give users information about a bookshelf (Docker, Image Segmentation/OCR, Google Cloud)",
+    description: "Give users information about a bookshelf. (Docker, Image Segmentation/OCR, Google Cloud)",
     imageUrl: "/book-hero.png", // eslint-disable-next-line
     details: "Rate My Bookshelf is a webapp that combines image segmentation, OCR, and an LLM API to provide a fun analysis of your bookshelf, or a bookshelf that you have found out in the wild.\
  \n\nThe UX (click the link above to try) comprises three stages: the user uploads a photo, the webapp processes on whilst on the loading screen, and then the user lands on a descriptive analysis page.\
@@ -55,10 +55,30 @@ const projects = [
   },
   {
     id: "project-3",
-    title: "Microscopy with AI",
-    description: "Research with Cambridge Biotech.",
-    imageUrl: "/sim-small.png",
-    details: "Description incoming, for now click the links above.",  
+    title: "AI Research with the Cambridge University Biotech Dept.",
+    description: "Enhancing super-resolution microscopy with computer vision techniques.",
+    imageUrl: "/sim-small.png", // eslint-disable-next-line
+    details: "This project formed the basis of my dissertation at the end of my MPhil studies.\
+ For the project I collaborated with the Department of Chemical Engineering and Biotechnology,\
+ specifically the Laser Analytics Group, who very generously supported this project and invited me to use their lab equipment.\
+ The goal of the project was to assess the reproducibility of the results from a paper published in Nature [1] in 2023.\
+ The paper claimed to have used a particular architecture of neural network to augment an established method of super-resolution microscopy known as structured illumination, or SIM.\
+ \n\nKey achievements of the project:\
+ \n\nML/DS principles applied to real scientific research. This was a unique chance to see some of the techniques that I have learnt about being used in action.\
+ It was extremely valuable to have conversations with experts at the frontier of scientific research, discussing the benefits and challenges of novel data-driven approaches to this specific field.\
+ \n\nReproducing RCAN architecture using a different deep learning framework.\
+ The original network architecture used by the researchers was implemented in Tensorflow.\
+ This was incompatible with the compute resources I was using for training, so I had to migrate the whole code to PyTorch carefully to ensure reproducibility.\
+ This helped me to develop fluency in both packages.\
+ \n\nNavigated a steep learning curve in an unfamiliar domain.\
+ I completed this work to a high-quality (my final grade was 82/100) despite having next to zero prior understanding of how fluorescence microscopy worked.\
+ Alongside the core research I had to also quickly learn the fundamentals of this field.\
+ In the same vein, much of the data I collected myself from the labs with an actual SIM microscope, which was also very new (and exciting) coming from a mathematics background.\
+ \n\nSynthetic data. The rest of the data used for the project was generated synthetically using data from the Visible Human Project [2] as a foundation.\
+ This enabled me to achieve the goals of the project without wasting time collecting data.\
+ \n\n[1] https://www.nature.com/articles/s41587-022-01651-1\
+ \n\n[2] https://www.nlm.nih.gov/research/visible/visible_human.html\
+ ",
     github: "https://github.com/james-hughes1/sim_denoising",
     websitelink: `${process.env.PUBLIC_URL}/mphildis_project.pdf`
   },
@@ -88,24 +108,6 @@ const projects = [
     details: "Description incoming, for now visit the GitHub or read the report.",  
     github: "https://github.com/james-hughes1/diffusion-mnist/",
     websitelink: `${process.env.PUBLIC_URL}/generating_digits.pdf`
-  },
-  {
-    id: "project-7",
-    title: "Flag Puzzle",
-    description: "A fast-paced flag guessing game. (Javascript, MongoDB, Frontend)",
-    imageUrl: "/flagpuzzleimg.png",
-    details: "Description incoming, for now visit the GitHub or visit the site.",  
-    github: "https://github.com/james-hughes1/flagpuzzle",
-    websitelink: "https://flagpuzzle.onrender.com"
-  },
-  {
-    id: "project-8",
-    title: "Poker Simulator",
-    description: "Play poker with AI opponents. (LLM APIs, React)",
-    imageUrl: "/pokersimimg.png",
-    details: "Description incoming, for now visit the GitHub or visit the site.",
-    github: "https://github.com/james-hughes1/pokersim",
-    websitelink: "https://pokersim.vercel.app/"
   },
 ];
 
