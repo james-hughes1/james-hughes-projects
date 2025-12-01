@@ -94,18 +94,63 @@ const projects = [
   {
     id: "project-5",
     title: "Game of Life",
-    description: "Supercomputer simulations. (C++, Parallelism/HPC/SLURM)",
-    imageUrl: "/gol-small.png",
-    details: "Description incoming, for now visit the GitHub or read the report.",
+    description: "Supercomputer simulations. (C++, Optimisation/Parallelism, HPC/SLURM)",
+    imageUrl: "/gol-small.png", // eslint-disable-next-line
+    details: "This project formed part of my advanced software engineering coursework during my MPhil.\
+ The goal was to build a highly optimised, scalable simulation of Conway's Game of Life, using the project as a vehicle to explore high-performance C++ programming and modern parallel computing techniques.\
+ The work was carried out on the CSD3 HPC clusters, requiring careful configuration of SLURM environments, MPI topologies, and multi-threaded execution.\
+ \n\nKey achievements of the project:\
+ \n\nApplied HPC and systems-level engineering to a real scientific computing problem. The project required deep engagement with memory layout, cache behaviour, computational complexity, and cluster-level performance.\
+ I gained hands-on experience running large simulation experiments at scale and interpreting how algorithmic choices interact with hardware.\
+ \n\nDesigned and optimised core algorithms for large-scale performance. I refactored the neighbour-counting routine using a separable convolution approach, reducing operations per cell and achieving ~8x speed improvements.\
+ I also redesigned rule-evaluation logic to eliminate branch mispredictions, resulting in cleaner and faster code.\
+ \n\nImplemented hybrid MPI & OpenMP parallelisation. I developed both 1D and 2D domain decomposition strategies and wrote efficient halo-exchange communication patterns.\
+ Within each MPI rank, I threaded performance-critical sections using OpenMP, achieving up to ~66% speed-ups on large simulations.\
+ \n\nSoftware engineering best practices under performance pressure. I built a modular codebase with clearly separated grid logic, boundary handling, and simulation evolution.\
+ A full GoogleTest suite ensured correctness during aggressive optimisation and refactoring.\
+ \n\nNavigated complex HPC workflows and tooling. I became fluent in configuring SLURM submissions, managing environment modules, and optimising thread/process pinning on multi-core architectures.\
+ This experience significantly improved my confidence working on cluster-scale systems.\
+ ",
     github: "https://github.com/james-hughes1/game-of-life-hpc",
     websitelink: `${process.env.PUBLIC_URL}/game_of_life.pdf`
   },
   {
     id: "project-6",
     title: "Diffusion MNIST",
-    description: "Image generation. (Doxygen, PyTorch, Generative AI)",
-    imageUrl: "/diffusion.png",
-    details: "Description incoming, for now visit the GitHub or read the report.",  
+    description: "Image generation. (PyTorch, ML Engineering)",
+    imageUrl: "/diffusion.png", // eslint-disable-next-line
+    details: "This project formed the basis of my coursework report during my MPhil in Machine Learning.\
+ For the project I implemented and analysed diffusion-based generative models on the MNIST dataset,\
+ developing the project as a reusable Python package and scaling experiments on the Cambridge CSD3 HPC cluster.\
+ The goal was to compare standard Gaussian noise diffusion with a novel custom degradation operator inspired by cold diffusion frameworks.\
+ \n\nFor the uninitiated, diffusion is a generative AI approach which relies on adding (gaussian) noise to an input (here an image),\
+ and then training a model to denoise that image, across a range of intensities of degradation.\
+ When successful, you can then simply generate random gaussian noise, and use this as a 'seed' to generate the desired image.\
+ In this project I applied this method to the MNIST handwritten digit dataset.\
+ I then stretched the method by coming up with my own original degradation operator, one which permutes pixels in the image randomly.\
+ The distance between swapped pixels is controlled by the intensity of the operator (see the image at the top of this page for a demo!)\
+ \n\nKey achievements of the project:\
+ \n\nApplied ML engineering principles to generative modelling.\
+ I designed reproducible training pipelines with config-driven hyperparameter control, model checkpointing, and automated sampling.\
+ This helped me to strengthen my engineering workflow and software practices.\
+ \n\nCombined creativity with theory.\
+ I implemented a pixel-swapping operator as an alternative to Gaussian noise,\
+ which required looking to state-of-the-art research as inspiration,\
+ whilst balancing this with feasibility.\
+ This led me to create a custom PyTorch class which helped me become familiar with the library,\
+ and also take into consideration computational complexity.\
+ \n\nHigh-performance computing.\
+ I successfully trained models over hundreds of epochs on HPC resources,\
+ allowing me to develop my ability to scale experiments and manage compute-intensive workloads.\
+ \n\nCritical evaluation of generative AI.\
+ The project highlights the challenges of evaluating generative AI software systematically.\
+ I used thorough visual inspection of real samples, alongside quantitative analysis of the generated images,\
+ to tune my models.\
+ One interesting part of the analysis (see the report!!) was using t-SNE for non-linear dimensionality reduction,\
+ which I applied to both the MNIST dataset and a generated sample of images.\
+ I could then visually compare the distribution of generated images and ground-truth, and even\
+ extend this by building a gaussian means model or using Kullback-Leibler divergence to assess image generation.\
+ ",  
     github: "https://github.com/james-hughes1/diffusion-mnist/",
     websitelink: `${process.env.PUBLIC_URL}/generating_digits.pdf`
   },
