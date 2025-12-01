@@ -14,7 +14,7 @@ export default function Sidebar({ open, onClose }) {
         Each summary has a link to the code and a couple have interactive demos/webapps.
       </p>
       <p className="bio">
-        If you have any feedback, or questions, or would like to contribute to a project, please send me a message.
+        I always appreciate any feedback, or questions, or suggestions. Please feel free to send me a message!
       </p>
       <div className="links">
         <a href="https://linkedin.com/in/jameshughes-1" target="_blank" rel="noreferrer">LinkedIn</a>
