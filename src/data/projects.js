@@ -55,6 +55,18 @@ const projects = [
   },
   {
     id: "project-3",
+    title: "Alpha Modelling",
+    description: "A sandbox for RL inference. (AWS & Monitoring, Reinforcement Learning, CI/CD)",
+    imageUrl: "/alpha-dashboard.png", // eslint-disable-next-line
+    details: "This is an interactive quantitative modelling project that allowed me to explore systematic alpha generation and backtesting.\
+\n\nI built a weekly alpha model for SBUX that predicts next-week excess returns relative to SPY using a combination of historical alpha, momentum, macroeconomic, and liquidity factors.\
+\n\nThe project includes a dashboard where users can adjust signal thresholds and transaction costs to see cumulative strategy versus buy-and-hold performance, with key metrics like Sharpe ratio, win rate, and max drawdown dynamically updated.\
+",
+    github: "https://github.com/james-hughes1/sbux-signal-model",
+    websitelink: "https://sbux-model.vercel.app/"
+  },
+  {
+    id: "project-4",
     title: "AI Research with the Cambridge University Biotech Dept.",
     description: "Enhancing super-resolution microscopy with computer vision techniques.",
     imageUrl: "/sim-small.png", // eslint-disable-next-line
@@ -83,7 +95,7 @@ const projects = [
     websitelink: `${process.env.PUBLIC_URL}/mphildis_project.pdf`
   },
   {
-    id: "project-4",
+    id: "project-5",
     title: "HR Chatbot",
     description: "RAG Engineering at work. (RAG, Evaluation Frameworks)",
     imageUrl: "/chatbot.png",
@@ -92,7 +104,7 @@ const projects = [
     websitelink: "https://ekimetrics.github.io/blog/Wombat_HR_v2"
   },
   {
-    id: "project-5",
+    id: "project-6",
     title: "Game of Life",
     description: "Supercomputer simulations. (C++, Optimisation/Parallelism, HPC/SLURM)",
     imageUrl: "/gol-small.png", // eslint-disable-next-line
@@ -115,7 +127,7 @@ const projects = [
     websitelink: `${process.env.PUBLIC_URL}/game_of_life.pdf`
   },
   {
-    id: "project-6",
+    id: "project-7",
     title: "Diffusion MNIST",
     description: "Image generation. (PyTorch, ML Engineering)",
     imageUrl: "/diffusion.png", // eslint-disable-next-line
