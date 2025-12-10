@@ -56,7 +56,7 @@ const projects = [
   {
     id: "project-3",
     title: "Alpha Modelling",
-    description: "A sandbox for RL inference. (AWS & Monitoring, Reinforcement Learning, CI/CD)",
+    description: "Generating buy-side signals for SBUX. (Quantitative analysis, Systematic Backtesting)",
     imageUrl: "/alpha-dashboard.png", // eslint-disable-next-line
     details: "This is an interactive quantitative modelling project that allowed me to explore systematic alpha generation and backtesting.\
 \n\nI built a weekly alpha model for SBUX that predicts next-week excess returns relative to SPY using a combination of historical alpha, momentum, macroeconomic, and liquidity factors.\
