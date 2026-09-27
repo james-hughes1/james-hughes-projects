@@ -48,6 +48,7 @@ const projects = [
  \n\nAWS Deployment: The docker image is hosted on an elastic container registry (ECR) on AWS, and then the app itself is hosted on an EC2 instance.\
  The app has code within it that enables monitoring via AWS CloudWatch.\
  This enables monitoring of performance KPIs related to model inference such as latency and episode scores.\
+ \n\n -- NOTE: As of September 2026, I've migrated this project to Cloud Run which is much more cost-effective than hosting an always-on EC2 server! This was a valuable exercise nonetheless.\
  \n\nI also configured the site to run on my own custom domain, https://robot-sandbox.xyz\
  ",
     github: "https://github.com/james-hughes1/robo-dunk",
