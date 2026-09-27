@@ -49,10 +49,10 @@ const projects = [
  The app has code within it that enables monitoring via AWS CloudWatch.\
  This enables monitoring of performance KPIs related to model inference such as latency and episode scores.\
  \n\n -- NOTE: As of September 2026, I've migrated this project to Cloud Run which is much more cost-effective than hosting an always-on EC2 server! This was a valuable exercise nonetheless.\
- \n\nI also configured the site to run on my own custom domain, https://robot-sandbox.xyz\
+ I'm also not renewing the custom domain, https://robot-sandbox.xyz, so the site is just at the default google cloud domain below.\
  ",
     github: "https://github.com/james-hughes1/robo-dunk",
-    websitelink: "https://robot-sandbox.xyz/"
+    websitelink: "https://robo-dunk-6urhqgidha-nw.a.run.app/"
   },
   {
     id: "project-3",
