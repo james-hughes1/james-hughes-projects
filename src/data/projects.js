@@ -1,6 +1,32 @@
 const projects = [
   {
     id: "project-1",
+    title: "Demand Flexibility on the UK Grid",
+    description: "Analysis of consumer responses to NESO's Demand Flexibility Service",
+    imageUrl: "/smart-meter-img.jpg", // eslint-disable-next-line
+    details: "This is an independent research project testing whether the energy savings NESO pays for through its Demand Flexibility Service (DFS) actually show up in public data.\
+ Households are paid by comparing their metered usage with a \"baseline\" (an estimate of what they would normally have used), so if that baseline is wrong, NESO pays for flexibility that never happened.\
+ \n\nThe project has two parts: a national check and a household check. The results are presented in an interactive ten-card webapp (click the link above to try).\
+ \n\nBelow I list the main methods and what I learnt from each.\
+ \n\nNational check: A stacked difference-in-differences event study on 5-minute GB generation data, with placebo tests and bootstrap confidence intervals.\
+ An early version showed a dip 10x larger than the claimed delivery, which turned out to be an artefact of the reference period I had chosen. Placebo tests caught it.\
+ The lesson for me was that robustness checks are really helpful for insuring against inherent biases in the way you chose to setup your analysis (an xkcd comic I go back to often: https://www.explainxkcd.com/wiki/index.php/882%3A_Significant).\
+ \n\nHousehold baselines: I implemented the official BL01 baseline rule (Elexon P376) and tested it on 5,500 London smart meters from the Low Carbon London trial [1].\
+ The trial randomised households onto a time-of-use tariff, so the true effect was known and could be compared with what BL01 would have credited.\
+ BL01 turns out to be unbiased on average but noisy for each home, and biased by recent temperature changes.\
+ \n\nBetter baselines: Weather-aware gradient-boosted baselines cut portfolio error from 7.5% to 5.5%.\
+ The bigger finding, though, was that the rules matter more than the model: the settlement rule ignores homes whose usage went up instead of down, and that alone adds about 25% of phantom \"delivery\". This matches NESO's own evaluation of real DFS meters [2].\
+ \n\nValue for money: Turning a statistical bias into pounds needs clearly labelled scenarios. Under the scenarios that best match outside evidence, about £8-17m of the £24.8m paid out was overpayment.\
+ \n\nEngineering: The code is a tested Python package (uv, pytest) with idempotent data loaders for NESO, Elexon, Open-Meteo and the smart meter data.\
+ Implementing BL01 meant reading a regulatory spec closely enough to reproduce it exactly, and I caught a timestamp-labelling bug in the raw data along the way (readings were stamped at the end of each half-hour, the tariff schedule at the start).\
+ \n\n[1] https://data.london.gov.uk/dataset/smartmeter-energy-use-data-in-london-households\
+ \n\n[2] https://www.neso.energy/industry-information/balancing-services/demand-flexibility-service-dfs\
+",
+    github: "https://github.com/james-hughes1/uk-dfs",
+    websitelink: "https://uk-dfs-project.vercel.app/#image-0"
+  },
+  {
+    id: "project-2",
     title: "Rate My Bookshelf",
     description: "Give users information about a bookshelf. (Docker, Image Segmentation/OCR, Google Cloud)",
     imageUrl: "/book-hero.png", // eslint-disable-next-line
@@ -28,7 +54,7 @@ const projects = [
     websitelink: "https://rate-my-bookshelf.vercel.app/"
   },
   {
-    id: "project-2",
+    id: "project-3",
     title: "Robo Dunk",
     description: "A sandbox for RL inference. (AWS & Monitoring, Reinforcement Learning, CI/CD)",
     imageUrl: "/robodunk-small.png", // eslint-disable-next-line
@@ -56,18 +82,6 @@ const projects = [
   },
   {
     id: "project-3",
-    title: "Alpha Modelling",
-    description: "Generating buy-side signals for SBUX. (Quantitative analysis, Systematic Backtesting)",
-    imageUrl: "/alpha-dashboard.png", // eslint-disable-next-line
-    details: "This is an interactive quantitative modelling project that allowed me to explore systematic alpha generation and backtesting.\
-\n\nI built a weekly alpha model for SBUX that predicts next-week excess returns relative to SPY using a combination of historical alpha, momentum, macroeconomic, and liquidity factors.\
-\n\nThe project includes a dashboard where users can adjust signal thresholds and transaction costs to see cumulative strategy versus buy-and-hold performance, with key metrics like Sharpe ratio, win rate, and max drawdown dynamically updated.\
-",
-    github: "https://github.com/james-hughes1/sbux-signal-model",
-    websitelink: "https://sbux-model.vercel.app/"
-  },
-  {
-    id: "project-4",
     title: "AI Research with the Cambridge University Biotech Dept.",
     description: "Enhancing super-resolution microscopy with computer vision techniques.",
     imageUrl: "/sim-small.png", // eslint-disable-next-line
@@ -96,7 +110,7 @@ const projects = [
     websitelink: `${process.env.PUBLIC_URL}/mphildis_project.pdf`
   },
   {
-    id: "project-5",
+    id: "project-4",
     title: "HR Chatbot",
     description: "RAG Engineering at work. (RAG, Evaluation Frameworks)",
     imageUrl: "/chatbot.png",
@@ -105,7 +119,7 @@ const projects = [
     websitelink: "https://ekimetrics.github.io/blog/Wombat_HR_v2"
   },
   {
-    id: "project-6",
+    id: "project-5",
     title: "Game of Life",
     description: "Supercomputer simulations. (C++, Optimisation/Parallelism, HPC/SLURM)",
     imageUrl: "/gol-small.png", // eslint-disable-next-line
@@ -128,7 +142,7 @@ const projects = [
     websitelink: `${process.env.PUBLIC_URL}/game_of_life.pdf`
   },
   {
-    id: "project-7",
+    id: "project-6",
     title: "Diffusion MNIST",
     description: "Image generation. (PyTorch, ML Engineering)",
     imageUrl: "/diffusion.png", // eslint-disable-next-line
