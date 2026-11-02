@@ -19,10 +19,10 @@ export default function Home({ onOpenSidebar }) {
 
       <section className="projects-section">
         <div className="projects-grid">
-          {projects.map(({ id, title, description, imageUrl }) => (
+          {projects.map(({ id, title, description, imageUrl, latest }) => (
             <button
               key={id}
-              className="project-card"
+              className={`project-card${latest ? " project-card--latest" : ""}`}
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${imageUrl})`,
                 backgroundSize: 'cover',
@@ -32,6 +32,7 @@ export default function Home({ onOpenSidebar }) {
               aria-label={`View details for ${title}`}
             >
               <div className="overlay" />
+              {latest && <span className="latest-badge">Latest project</span>}
               <h3>{title}</h3>
               <p>{description}</p>
             </button>

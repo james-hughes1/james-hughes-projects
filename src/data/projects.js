@@ -23,7 +23,8 @@ const projects = [
  \n\n[2] https://www.neso.energy/industry-information/balancing-services/demand-flexibility-service-dfs\
 ",
     github: "https://github.com/james-hughes1/uk-dfs",
-    websitelink: "https://uk-dfs-project.vercel.app/#image-0"
+    websitelink: "https://uk-dfs-project.vercel.app/#image-0",
+    latest: true // Set on one project to highlight it on the landing page
   },
   {
     id: "project-2",
@@ -111,7 +112,7 @@ const projects = [
   },
   {
     id: "project-4",
-    title: "HR Chatbot",
+    title: "WOMBAT: Professional HR Chatbot",
     description: "RAG Engineering at work. (RAG, Evaluation Frameworks)",
     imageUrl: "/chatbot.png",
     details: "This is an internal project that I joined, to help update to version 2.0 at work. In that process, I helped the team to achieve an evaluation score of 0.64, up from 0.37. We co-authored a though-piece on this work at the link above.",
@@ -143,8 +144,8 @@ const projects = [
   },
   {
     id: "project-6",
-    title: "Diffusion MNIST",
-    description: "Image generation. (PyTorch, ML Engineering)",
+    title: "AI Models for Image Generation",
+    description: "Image generation with diffusion techniques on classic MNIST digit dataset. (PyTorch, ML Engineering)",
     imageUrl: "/diffusion.png", // eslint-disable-next-line
     details: "This project formed the basis of my coursework report during my MPhil in Machine Learning.\
  For the project I implemented and analysed diffusion-based generative models on the MNIST dataset,\
