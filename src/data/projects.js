@@ -82,7 +82,7 @@ const projects = [
     websitelink: "https://robo-dunk-6urhqgidha-nw.a.run.app/"
   },
   {
-    id: "project-3",
+    id: "project-4",
     title: "AI Research with the Cambridge University Biotech Dept.",
     description: "Enhancing super-resolution microscopy with computer vision techniques.",
     imageUrl: "/sim-small.png", // eslint-disable-next-line
@@ -111,7 +111,7 @@ const projects = [
     websitelink: `${process.env.PUBLIC_URL}/mphildis_project.pdf`
   },
   {
-    id: "project-4",
+    id: "project-5",
     title: "WOMBAT: Professional HR Chatbot",
     description: "RAG Engineering at work. (RAG, Evaluation Frameworks)",
     imageUrl: "/chatbot.png",
@@ -120,7 +120,7 @@ const projects = [
     websitelink: "https://ekimetrics.github.io/blog/Wombat_HR_v2"
   },
   {
-    id: "project-5",
+    id: "project-6",
     title: "Game of Life",
     description: "Supercomputer simulations. (C++, Optimisation/Parallelism, HPC/SLURM)",
     imageUrl: "/gol-small.png", // eslint-disable-next-line
@@ -143,7 +143,7 @@ const projects = [
     websitelink: `${process.env.PUBLIC_URL}/game_of_life.pdf`
   },
   {
-    id: "project-6",
+    id: "project-7",
     title: "AI Models for Image Generation",
     description: "Image generation with diffusion techniques on classic MNIST digit dataset. (PyTorch, ML Engineering)",
     imageUrl: "/diffusion.png", // eslint-disable-next-line
