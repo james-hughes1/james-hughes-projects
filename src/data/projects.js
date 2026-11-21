@@ -24,7 +24,7 @@ const projects = [
 ",
     github: "https://github.com/james-hughes1/uk-dfs",
     websitelink: "https://uk-dfs-project.vercel.app/#image-0",
-    latest: true // Set on one project to highlight it on the landing page
+    latest: false // Set on one project to highlight it on the landing page
   },
   {
     id: "project-2",
