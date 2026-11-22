@@ -56,6 +56,20 @@ const projects = [
   },
   {
     id: "project-3",
+    title: "Battery Revenue and Forecast Error on the GB Power Market",
+    description: "How much battery revenue forecast error costs, and whether probabilistic forecasts win it back",
+    imageUrl: "/grid_storage.webp", // eslint-disable-next-line
+    details: "An interactive webapp for exploring GB wholesale power prices, backtesting day-ahead price forecasts, and optimising battery dispatch against them (click the link above to try).\
+ \n\nIncludes a modelling sandbox, from naive baselines to advanced machine learning and time-series models, with careful steps taken to avoid leakage (the forecasts are to be made at 10am the day before).\
+ A couple of models are then used as inputs to a MILP scheme which optimises a theoretical battery, comparing revenue to perfect foresight. Over the past 12 months LEAR achieved a 71% capture-rate.\
+ \n\nEngineering: a tested Python package (uv, pytest), containerised in Docker and deployed on Google Cloud Run.\
+",
+    github: "https://github.com/james-hughes1/gb-price-sandbox",
+    websitelink: "https://gb-price-sandbox-eh6qa2mssa-nw.a.run.app",
+    latest: false // Set on one project to highlight it on the landing page
+  },
+  {
+    id: "project-4",
     title: "Robo Dunk",
     description: "A sandbox for RL inference. (AWS & Monitoring, Reinforcement Learning, CI/CD)",
     imageUrl: "/robodunk-small.png", // eslint-disable-next-line
@@ -82,7 +96,7 @@ const projects = [
     websitelink: "https://robo-dunk-6urhqgidha-nw.a.run.app/"
   },
   {
-    id: "project-4",
+    id: "project-5",
     title: "AI Research with the Cambridge University Biotech Dept.",
     description: "Enhancing super-resolution microscopy with computer vision techniques.",
     imageUrl: "/sim-small.png", // eslint-disable-next-line
@@ -111,7 +125,7 @@ const projects = [
     websitelink: `${process.env.PUBLIC_URL}/mphildis_project.pdf`
   },
   {
-    id: "project-5",
+    id: "project-6",
     title: "WOMBAT: Professional HR Chatbot",
     description: "RAG Engineering at work. (RAG, Evaluation Frameworks)",
     imageUrl: "/chatbot.png",
@@ -120,7 +134,7 @@ const projects = [
     websitelink: "https://ekimetrics.github.io/blog/Wombat_HR_v2"
   },
   {
-    id: "project-6",
+    id: "project-7",
     title: "Game of Life",
     description: "Supercomputer simulations. (C++, Optimisation/Parallelism, HPC/SLURM)",
     imageUrl: "/gol-small.png", // eslint-disable-next-line
@@ -143,7 +157,7 @@ const projects = [
     websitelink: `${process.env.PUBLIC_URL}/game_of_life.pdf`
   },
   {
-    id: "project-7",
+    id: "project-8",
     title: "AI Models for Image Generation",
     description: "Image generation with diffusion techniques on classic MNIST digit dataset. (PyTorch, ML Engineering)",
     imageUrl: "/diffusion.png", // eslint-disable-next-line
